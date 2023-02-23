@@ -35,7 +35,6 @@ public class ExtraMovieCanvasControlScript : UIGameObject
 	{
 		base.gameObject.SetActive(false);
 		Singleton<AVGManager>.Instance.LoadStatus();
-		Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x0600045A RID: 1114 RVA: 0x0000EA45 File Offset: 0x0000CE45

@@ -163,7 +163,6 @@ public class ConfigButtonScript : UIGameObject
 	{
 		base.gameObject.SetActive(false);
 		Singleton<AVGManager>.Instance.LoadStatus();
-		Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x04000224 RID: 548

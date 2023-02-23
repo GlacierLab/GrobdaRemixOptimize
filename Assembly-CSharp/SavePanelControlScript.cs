@@ -21,7 +21,6 @@ public class SavePanelControlScript : MonoBehaviour
 			int num = i + 9 * this.nowSelect;
 			this.itemGroups[i].SetSaveData(allSaveData[num], num);
 		}
-		Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x06000409 RID: 1033 RVA: 0x0000DDA8 File Offset: 0x0000C1A8
@@ -31,7 +30,6 @@ public class SavePanelControlScript : MonoBehaviour
 		{
 			this.itemGroups[i].ClearImage();
 		}
-		Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x0600040A RID: 1034 RVA: 0x0000DDE4 File Offset: 0x0000C1E4

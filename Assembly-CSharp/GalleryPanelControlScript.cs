@@ -30,7 +30,6 @@ public class GalleryPanelControlScript : MonoBehaviour
 				this.itemGroups[i].scriptStr = this.imageItems[num].scptName;
 			}
 		}
-		Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x0600046E RID: 1134 RVA: 0x0000ED14 File Offset: 0x0000D114
@@ -40,7 +39,6 @@ public class GalleryPanelControlScript : MonoBehaviour
 		{
 			this.itemGroups[i].ClearImage();
 		}
-		Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x0600046F RID: 1135 RVA: 0x0000ED50 File Offset: 0x0000D150

@@ -34,7 +34,6 @@ public class GalleryCanvasControlScript : UIGameObject
 	{
 		base.gameObject.SetActive(false);
 		Singleton<AVGManager>.Instance.LoadStatus();
-		Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x06000465 RID: 1125 RVA: 0x0000EB65 File Offset: 0x0000CF65

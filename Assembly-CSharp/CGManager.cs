@@ -97,7 +97,6 @@ public class CGManager : Singleton<CGManager>
 	public void UnloadSpriteAsset()
 	{
 		this.spritDict.Clear();
-		Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x040001B4 RID: 436

@@ -38,7 +38,6 @@ public class SaveCanvasControlScript : UIGameObject
         {
             File.Delete(this.filepath + "/test.png");
         }
-        Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x060003F4 RID: 1012 RVA: 0x0000D725 File Offset: 0x0000BB25

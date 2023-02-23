@@ -38,7 +38,6 @@ public class MusicCanvasControlScript : UIGameObject
 	{
 		base.gameObject.SetActive(false);
 		Singleton<AVGManager>.Instance.LoadStatus();
-		Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x06000478 RID: 1144 RVA: 0x0000F045 File Offset: 0x0000D445

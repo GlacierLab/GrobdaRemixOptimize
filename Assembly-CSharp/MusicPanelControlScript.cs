@@ -34,7 +34,6 @@ public class MusicPanelControlScript : MonoBehaviour
 				this.itemGroups[i].gameObject.SetActive(true);
 			}
 		}
-		Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x06000482 RID: 1154 RVA: 0x0000F1C0 File Offset: 0x0000D5C0
@@ -44,7 +43,6 @@ public class MusicPanelControlScript : MonoBehaviour
 		{
 			this.itemGroups[i].ClearImage();
 		}
-		Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x06000483 RID: 1155 RVA: 0x0000F1FC File Offset: 0x0000D5FC
