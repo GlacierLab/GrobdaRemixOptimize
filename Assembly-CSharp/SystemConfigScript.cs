@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,14 @@ public class SystemConfigScript : MonoBehaviour
 	// Token: 0x0600041F RID: 1055 RVA: 0x0000E123 File Offset: 0x0000C523
 	private void Start()
 	{
-	}
+        Resolutions = Screen.resolutions;
+        List<Dropdown.OptionData> ResolutionOptions = new List<Dropdown.OptionData>();
+        foreach (Resolution res in Resolutions)
+        {
+            ResolutionOptions.Add(new Dropdown.OptionData(res.width + "x" + res.height+"@"+res.refreshRate));
+        }
+		DropdownItem.options = ResolutionOptions;
+    }
 
 	// Token: 0x06000420 RID: 1056 RVA: 0x0000E125 File Offset: 0x0000C525
 	private void Update()
@@ -77,7 +85,8 @@ public class SystemConfigScript : MonoBehaviour
 	public void ChangeRatio(int i)
 	{
 		i = this.DropdownItem.value;
-		GameConfigManager.SetScreenRatio(i);
+        Screen.SetResolution(Resolutions[i].width, Resolutions[i].height, Singleton<GameConfigManager>.Instance.config.ScreenMode, Resolutions[i].refreshRate);
+        
 		Singleton<GameConfigManager>.Instance.config.ScreenRatio = i;
 	}
 
@@ -86,4 +95,6 @@ public class SystemConfigScript : MonoBehaviour
 
 	// Token: 0x0400027C RID: 636
 	public Dropdown DropdownItem;
+
+	public Resolution[] Resolutions;
 }

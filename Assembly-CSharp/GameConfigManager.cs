@@ -58,32 +58,12 @@ public class GameConfigManager : Singleton<GameConfigManager>
 		}
 		this.ApplyAllConfig();
 	}
-
-	// Token: 0x060001DA RID: 474 RVA: 0x00006EA0 File Offset: 0x000052A0
-	public static void SetScreenRatio(int index)
-	{
-		switch (index)
-		{
-		case 0:
-			Screen.SetResolution(1280, 800, Singleton<GameConfigManager>.Instance.config.ScreenMode);
-			break;
-		case 1:
-			Screen.SetResolution(1920, 1200, Singleton<GameConfigManager>.Instance.config.ScreenMode);
-			break;
-		case 2:
-			Screen.SetResolution(1280, 720, Singleton<GameConfigManager>.Instance.config.ScreenMode);
-			break;
-		case 3:
-			Screen.SetResolution(1920, 1080, Singleton<GameConfigManager>.Instance.config.ScreenMode);
-			break;
-		}
-	}
+    
 
 	// Token: 0x060001DB RID: 475 RVA: 0x00006F5C File Offset: 0x0000535C
 	public void ApplyAllConfig()
 	{
 		Screen.fullScreen = this.config.ScreenMode;
-		GameConfigManager.SetScreenRatio(this.config.ScreenRatio);
 		Singleton<BGMManager>.Instance.SetVolume(this.config.BgmVolume);
 		Singleton<SEManager>.Instance.SetVolume(this.config.SEVolume);
 	}
