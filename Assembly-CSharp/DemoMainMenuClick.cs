@@ -45,7 +45,7 @@ public class DemoMainMenuClick : UIGameObject
 		if (this.random == null)
 		{
 			long ticks = DateTime.Now.Ticks;
-			this.random = new System.Random((int)(ticks & (long)((ulong)(-1))) | (int)(ticks >> 32));
+			this.random = new System.Random((int)(ticks & -1) | (int)(ticks >> 32));
 		}
 		this.bg.sprite = this.GetBgByTime();
 		this.animator.speed = 0.5f;
