@@ -48,7 +48,7 @@ public class DemoMainMenuClick : UIGameObject
 			this.random = new System.Random((int)(ticks & -1) | (int)(ticks >> 32));
 		}
 		this.bg.sprite = this.GetBgByTime();
-		this.animator.speed = 0.5f;
+		this.animator.speed = 1f;
 		this.animator.Play("new_main_menu");
 		Camera component = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
 		component.backgroundColor = Color.black;
