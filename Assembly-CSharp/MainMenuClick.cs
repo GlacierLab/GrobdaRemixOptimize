@@ -11,7 +11,8 @@ public class MainMenuClick : UIGameObject
 	// Token: 0x060003B9 RID: 953 RVA: 0x0000CCBD File Offset: 0x0000B0BD
 	private void Start()
 	{
-		this.Show();
+        Time.timeScale = 1f;
+        this.Show();
 		base.GetComponent<Canvas>().worldCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
 	}
 

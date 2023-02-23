@@ -11,7 +11,8 @@ public class DemoMainMenuClick : UIGameObject
 	// Token: 0x06000368 RID: 872 RVA: 0x0000C020 File Offset: 0x0000A420
 	private void Start()
 	{
-		this.Show();
+        Time.timeScale = 1f;
+        this.Show();
 	}
 
 	// Token: 0x06000369 RID: 873 RVA: 0x0000C028 File Offset: 0x0000A428

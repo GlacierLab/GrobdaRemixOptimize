@@ -31,7 +31,8 @@ public class AVGManager : Singleton<AVGManager>
 	// Token: 0x06000245 RID: 581 RVA: 0x00007FF4 File Offset: 0x000063F4
 	public void LoadLogoScript()
 	{
-		this.avgstatus = AVGStatus.WAIT;
+		Time.timeScale = 5f;
+        this.avgstatus = AVGStatus.WAIT;
 		this.LoadScript("xml/logo", true);
 	}
 
