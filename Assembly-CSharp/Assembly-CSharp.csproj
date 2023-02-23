@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{89A77475-6ACF-4872-BA19-F3595FA5E64C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Assembly-CSharp</RootNamespace>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Assembly-CSharp-firstpass">
+      <HintPath>D:\SteamLibrary\steamapps\common\Grobda Remix\kotokata_Data\Managed\Assembly-CSharp-firstpass.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>D:\SteamLibrary\steamapps\common\Grobda Remix\kotokata_Data\Managed\DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>D:\SteamLibrary\steamapps\common\Grobda Remix\kotokata_Data\Managed\DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>D:\SteamLibrary\steamapps\common\Grobda Remix\kotokata_Data\Managed\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>D:\SteamLibrary\steamapps\common\Grobda Remix\kotokata_Data\Managed\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>D:\SteamLibrary\steamapps\common\Grobda Remix\kotokata_Data\Managed\System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\SteamLibrary\steamapps\common\Grobda Remix\kotokata_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:\SteamLibrary\steamapps\common\Grobda Remix\kotokata_Data\Managed\UnityEngine.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActBgAction.cs" />
+    <Compile Include="ActBgScript.cs" />
+    <Compile Include="AddinAction.cs" />
+    <Compile Include="AddinManager.cs" />
+    <Compile Include="AddinScript.cs" />
+    <Compile Include="AesUtil.cs" />
+    <Compile Include="AspectUtility.cs" />
+    <Compile Include="AVGManager.cs" />
+    <Compile Include="AVGStatus.cs" />
+    <Compile Include="BackGroundControlScript.cs" />
+    <Compile Include="BaseAction.cs" />
+    <Compile Include="BaseGroupScript.cs" />
+    <Compile Include="BaseImmediateAction.cs" />
+    <Compile Include="BaseLayout.cs" />
+    <Compile Include="BaseLayoutManager.cs" />
+    <Compile Include="BaseSaveDataManager.cs" />
+    <Compile Include="BGMManager.cs" />
+    <Compile Include="BgmSaveData.cs" />
+    <Compile Include="BgmSaveDataManager.cs" />
+    <Compile Include="BGMSTATUS.cs" />
+    <Compile Include="BiaoControlScript.cs" />
+    <Compile Include="BlurAction.cs" />
+    <Compile Include="BlurChangeAction.cs" />
+    <Compile Include="BlurChangeScript.cs" />
+    <Compile Include="BlurScript.cs" />
+    <Compile Include="BnControlScript.cs" />
+    <Compile Include="CameraAction.cs" />
+    <Compile Include="CameraLayout.cs" />
+    <Compile Include="CGManager.cs" />
+    <Compile Include="CGSaveData.cs" />
+    <Compile Include="CGSaveDataManager.cs" />
+    <Compile Include="ConfigButtonScript.cs" />
+    <Compile Include="CreateAction.cs" />
+    <Compile Include="CreateLightAction.cs" />
+    <Compile Include="CreateLightScript.cs" />
+    <Compile Include="CreateScript.cs" />
+    <Compile Include="DataSaveData.cs" />
+    <Compile Include="DataSaveItem.cs" />
+    <Compile Include="DataSaveManager.cs" />
+    <Compile Include="DebugScreen.cs" />
+    <Compile Include="DelectActbgAction.cs" />
+    <Compile Include="DelectActbgScript.cs" />
+    <Compile Include="DelectLightAction.cs" />
+    <Compile Include="DelectLightScript.cs" />
+    <Compile Include="DeleteLayoutAction.cs" />
+    <Compile Include="DeleteLayoutScript.cs" />
+    <Compile Include="DemoMainMenuClick.cs" />
+    <Compile Include="EasterEgg.cs" />
+    <Compile Include="ErrorReporter.cs" />
+    <Compile Include="ExitGame.cs" />
+    <Compile Include="ExitMenu.cs" />
+    <Compile Include="ExtraMovieCanvasControlScript.cs" />
+    <Compile Include="ExtraMoviePanelControlScript.cs" />
+    <Compile Include="FadeInAction.cs" />
+    <Compile Include="FadeInScript.cs" />
+    <Compile Include="fadeout.cs" />
+    <Compile Include="FadeOutAction.cs" />
+    <Compile Include="FadeOutScript.cs" />
+    <Compile Include="FenControlScript.cs" />
+    <Compile Include="GalleryCanvasControlScript.cs" />
+    <Compile Include="GalleryItemGroup.cs" />
+    <Compile Include="GalleryPanelControlScript.cs" />
+    <Compile Include="GameButtonClick.cs" />
+    <Compile Include="GameConfig.cs" />
+    <Compile Include="GameConfigManager.cs" />
+    <Compile Include="GameVer.cs" />
+    <Compile Include="GlobleDebug.cs" />
+    <Compile Include="GroupAction.cs" />
+    <Compile Include="GroupScript.cs" />
+    <Compile Include="HeadSoundPanelControlScript.cs" />
+    <Compile Include="HideAction.cs" />
+    <Compile Include="HideScript.cs" />
+    <Compile Include="HideUIAction.cs" />
+    <Compile Include="HideUIScript.cs" />
+    <Compile Include="HistoryCanvasContorl.cs" />
+    <Compile Include="HistoryControlScript.cs" />
+    <Compile Include="HistoryItemScript.cs" />
+    <Compile Include="IBaseLayoutManager.cs" />
+    <Compile Include="ImageLayoutsManager.cs" />
+    <Compile Include="InitManager.cs" />
+    <Compile Include="InitResource.cs" />
+    <Compile Include="ISaveDataManager.cs" />
+    <Compile Include="Layout.cs" />
+    <Compile Include="LayoutKind.cs" />
+    <Compile Include="LayoutManager.cs" />
+    <Compile Include="LayoutStatus.cs" />
+    <Compile Include="LightLayout.cs" />
+    <Compile Include="LightManager.cs" />
+    <Compile Include="LightPowerAction.cs" />
+    <Compile Include="LightPowerScript.cs" />
+    <Compile Include="LightRangeAction.cs" />
+    <Compile Include="LightRangeScript.cs" />
+    <Compile Include="LoadAction.cs" />
+    <Compile Include="LoadSceneAction.cs" />
+    <Compile Include="LoadSceneScript.cs" />
+    <Compile Include="LoadScript.cs" />
+    <Compile Include="LoadScriptConfig.cs" />
+    <Compile Include="LyControlScript.cs" />
+    <Compile Include="MainMenuClick.cs" />
+    <Compile Include="MaterialManager.cs" />
+    <Compile Include="MoveAction.cs" />
+    <Compile Include="MoveScript.cs" />
+    <Compile Include="MovieAction.cs" />
+    <Compile Include="MovieControlScript.cs" />
+    <Compile Include="MovieManager.cs" />
+    <Compile Include="MoviePlane.cs" />
+    <Compile Include="MovieSaveData.cs" />
+    <Compile Include="MovieSaveDataManager.cs" />
+    <Compile Include="MovieScript.cs" />
+    <Compile Include="MusicCanvasControlScript.cs" />
+    <Compile Include="MusicItem.cs" />
+    <Compile Include="MusicPanelControlScript.cs" />
+    <Compile Include="NewHistoryItemScript.cs" />
+    <Compile Include="NewMainMenuClick.cs" />
+    <Compile Include="OtherControlScript.cs" />
+    <Compile Include="PauseBgmAction.cs" />
+    <Compile Include="PauseBgmScript.cs" />
+    <Compile Include="PauseScript.cs" />
+    <Compile Include="PlayBgmAction.cs" />
+    <Compile Include="PlayBgmScript.cs" />
+    <Compile Include="PlaySeAction.cs" />
+    <Compile Include="PlaySeScript.cs" />
+    <Compile Include="PointManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuakeAction.cs" />
+    <Compile Include="QuakeScript.cs" />
+    <Compile Include="ReturnToUIAction.cs" />
+    <Compile Include="ReturnToUIScript.cs" />
+    <Compile Include="RotateAction.cs" />
+    <Compile Include="RotateScript.cs" />
+    <Compile Include="SaveCanvasControlScript.cs" />
+    <Compile Include="SaveData.cs" />
+    <Compile Include="SaveDataManager.cs" />
+    <Compile Include="SaveDialogScript.cs" />
+    <Compile Include="SaveItemGroup.cs" />
+    <Compile Include="SaveLayoutItem.cs" />
+    <Compile Include="SaveLightItem.cs" />
+    <Compile Include="SavePanelControlScript.cs" />
+    <Compile Include="ScaleAction.cs" />
+    <Compile Include="ScaleScript.cs" />
+    <Compile Include="ScreenWaterDropEffect.cs" />
+    <Compile Include="ScriptExecute.cs" />
+    <Compile Include="ScriptKind.cs" />
+    <Compile Include="ScriptParse.cs" />
+    <Compile Include="ScriptStruct.cs" />
+    <Compile Include="ScrollBarControlScript.cs" />
+    <Compile Include="SeControlScript.cs" />
+    <Compile Include="SelectAction.cs" />
+    <Compile Include="SelectCanvasScript.cs" />
+    <Compile Include="SelectData.cs" />
+    <Compile Include="SelectLayout.cs" />
+    <Compile Include="SelectLayoutManager.cs" />
+    <Compile Include="SelectScript.cs" />
+    <Compile Include="SEManager.cs" />
+    <Compile Include="SerializableDictionary.cs" />
+    <Compile Include="SetAlphaAction.cs" />
+    <Compile Include="SetAlphaScript.cs" />
+    <Compile Include="SetGroupFlagAction.cs" />
+    <Compile Include="SetGroupFlagScript.cs" />
+    <Compile Include="SetImageAction.cs" />
+    <Compile Include="SetImageScript.cs" />
+    <Compile Include="SetPositionAction.cs" />
+    <Compile Include="SetPostionScript.cs" />
+    <Compile Include="ShaderColorChangeAction.cs" />
+    <Compile Include="ShaderColorChangeScript.cs" />
+    <Compile Include="ShowAction.cs" />
+    <Compile Include="ShowScript.cs" />
+    <Compile Include="ShowUIAction.cs" />
+    <Compile Include="ShowUIScript.cs" />
+    <Compile Include="Singleton.cs" />
+    <Compile Include="SoundPanelControlScript.cs" />
+    <Compile Include="StopBeScript.cs" />
+    <Compile Include="StopBgmAction.cs" />
+    <Compile Include="StopBgmScript.cs" />
+    <Compile Include="StopSeAction.cs" />
+    <Compile Include="SwapImageAction.cs" />
+    <Compile Include="SwapImageScript.cs" />
+    <Compile Include="SYControlScript.cs" />
+    <Compile Include="SystemAction.cs" />
+    <Compile Include="SystemConfigScript.cs" />
+    <Compile Include="SystemPanelControlScript.cs" />
+    <Compile Include="SystemScript.cs" />
+    <Compile Include="SystemSoundControlScript.cs" />
+    <Compile Include="SystemSoundManager.cs" />
+    <Compile Include="TestObj.cs" />
+    <Compile Include="TextAction.cs" />
+    <Compile Include="TextAutoSpeed.cs" />
+    <Compile Include="TextColorScript.cs" />
+    <Compile Include="TextGroupAction.cs" />
+    <Compile Include="TextGroupScript.cs" />
+    <Compile Include="TextIconScript.cs" />
+    <Compile Include="TextLayout.cs" />
+    <Compile Include="TextLayoutManager.cs" />
+    <Compile Include="TextPanelControlScript.cs" />
+    <Compile Include="TextScript.cs" />
+    <Compile Include="TextSpeedScript.cs" />
+    <Compile Include="TextVisibleAction.cs" />
+    <Compile Include="TextVisibleScript.cs" />
+    <Compile Include="TimeUtil.cs" />
+    <Compile Include="ToggleControlScript.cs" />
+    <Compile Include="UIGameObject.cs" />
+    <Compile Include="UIManager.cs" />
+    <Compile Include="uitest.cs" />
+    <Compile Include="UnityUtil.cs" />
+    <Compile Include="UnPauseBgmAction.cs" />
+    <Compile Include="UnPauseBgmScript.cs" />
+    <Compile Include="VoiceAction.cs" />
+    <Compile Include="VoiceManager.cs" />
+    <Compile Include="VoiceScript.cs" />
+    <Compile Include="VolumeAction.cs" />
+    <Compile Include="VolumeScript.cs" />
+    <Compile Include="WaitAction.cs" />
+    <Compile Include="WaitScript.cs" />
+    <Compile Include="XmlUtil.cs" />
+    <Compile Include="ZWControlScript.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
