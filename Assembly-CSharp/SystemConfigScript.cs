@@ -10,7 +10,11 @@ public class SystemConfigScript : MonoBehaviour
 	private void Start()
 	{
         Resolutions = Screen.resolutions;
-        List<Dropdown.OptionData> ResolutionOptions = new List<Dropdown.OptionData>();
+		List<Dropdown.OptionData> ResolutionOptions = new List<Dropdown.OptionData>
+		{
+			new Dropdown.OptionData("最大可用(保持比例)"),
+            new Dropdown.OptionData("最大可用(充满)")
+        };
         foreach (Resolution res in Resolutions)
         {
             ResolutionOptions.Add(new Dropdown.OptionData(res.width + "x" + res.height+"@"+res.refreshRate));
@@ -84,9 +88,29 @@ public class SystemConfigScript : MonoBehaviour
 	// Token: 0x06000429 RID: 1065 RVA: 0x0000E213 File Offset: 0x0000C613
 	public void ChangeRatio(int i)
 	{
-		i = this.DropdownItem.value;
-        Screen.SetResolution(Resolutions[i].width, Resolutions[i].height, Singleton<GameConfigManager>.Instance.config.ScreenMode, Resolutions[i].refreshRate);
-        
+		if (this.DropdownItem.value == 0)
+		{
+			var width = Display.main.systemWidth;
+			var height = Display.main.systemHeight;
+			if (width >= 1.6 * height)
+			{
+				width =(int) (1.6 * height);
+			}
+			else
+			{
+				height = (int)(width / 1.6);
+			}
+			Screen.SetResolution(width, height, Singleton<GameConfigManager>.Instance.config.ScreenMode);
+		}else if (this.DropdownItem.value == 1)
+		{
+            var width = Display.main.systemWidth;
+            var height = Display.main.systemHeight;
+            Screen.SetResolution(width, height, Singleton<GameConfigManager>.Instance.config.ScreenMode);
+        }
+        else{
+			i = this.DropdownItem.value - 2;
+			Screen.SetResolution(Resolutions[i].width, Resolutions[i].height, Singleton<GameConfigManager>.Instance.config.ScreenMode, Resolutions[i].refreshRate);
+		}
 		Singleton<GameConfigManager>.Instance.config.ScreenRatio = i;
 	}
 

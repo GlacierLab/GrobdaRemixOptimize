@@ -26,7 +26,6 @@ public class SystemPanelControlScript : MonoBehaviour
 	public void Init()
 	{
 		this.screenMode.SetStatus(Singleton<GameConfigManager>.Instance.config.ScreenMode);
-		this.ratioMode.value = Singleton<GameConfigManager>.Instance.config.ScreenRatio;
 		this.history.SetStatus(Singleton<GameConfigManager>.Instance.config.HisStoryMode);
 		this.hideMouse.SetStatus(Singleton<GameConfigManager>.Instance.config.MouseHide);
 		this.Skip.SetStatus(Singleton<GameConfigManager>.Instance.config.CtrlMode);
