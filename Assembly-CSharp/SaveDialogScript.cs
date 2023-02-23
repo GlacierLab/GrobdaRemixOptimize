@@ -1,5 +1,6 @@
 ﻿using System;
 using DG.Tweening;
+using System.IO;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,17 +34,21 @@ public class SaveDialogScript : MonoBehaviour
 		Singleton<SystemSoundManager>.Instance.PlaySound2();
 		LoadScriptConfig.SetSaveData(this.saveItemGroup.saveData);
 		SceneManager.LoadScene("logo");
-	}
+        if (File.Exists(this.filepath + "/test.png"))
+        {
+            File.Delete(this.filepath + "/test.png");
+        }
+    }
 
 	// Token: 0x060003F9 RID: 1017 RVA: 0x0000D843 File Offset: 0x0000BC43
 	public void Cancel()
 	{
 		Singleton<SystemSoundManager>.Instance.PlaySound2();
 		base.gameObject.SetActive(false);
-	}
-
-	// Token: 0x04000266 RID: 614
-	public CanvasGroup canvasGroup;
+    }
+    private string filepath = Application.dataPath + "/save";
+    // Token: 0x04000266 RID: 614
+    public CanvasGroup canvasGroup;
 
 	// Token: 0x04000267 RID: 615
 	public SaveItemGroup saveItemGroup;

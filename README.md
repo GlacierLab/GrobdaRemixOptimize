@@ -1,2 +1,4 @@
-# GrobdaRemixOptimize
- Solve Performance and Experience Issues
+# 且听琴语GR优化组件
+
+## 包含的优化
+修复一次存多个档第二个开始无截图的问题（23/02/23）

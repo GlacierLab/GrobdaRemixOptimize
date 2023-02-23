@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.IO;
 using DG.Tweening;
 using UnityEngine;
 
@@ -20,7 +20,7 @@ public class SaveCanvasControlScript : UIGameObject
 	public override void Hide()
 	{
 		this.savePanelControlScript.DeleteUnUseful();
-		this.Back();
+        this.Back();
 	}
 
 	// Token: 0x060003F2 RID: 1010 RVA: 0x0000D6DE File Offset: 0x0000BADE
@@ -34,7 +34,11 @@ public class SaveCanvasControlScript : UIGameObject
 	{
 		base.gameObject.SetActive(false);
 		Singleton<AVGManager>.Instance.LoadStatus();
-		Resources.UnloadUnusedAssets();
+        if (File.Exists(this.filepath + "/test.png"))
+        {
+            File.Delete(this.filepath + "/test.png");
+        }
+        Resources.UnloadUnusedAssets();
 	}
 
 	// Token: 0x060003F4 RID: 1012 RVA: 0x0000D725 File Offset: 0x0000BB25
@@ -52,9 +56,9 @@ public class SaveCanvasControlScript : UIGameObject
 			}
 		}
 	}
-
-	// Token: 0x04000263 RID: 611
-	public CanvasGroup canvasGroup;
+    private string filepath = Application.dataPath + "/save";
+    // Token: 0x04000263 RID: 611
+    public CanvasGroup canvasGroup;
 
 	// Token: 0x04000264 RID: 612
 	public GameObject Dialog;

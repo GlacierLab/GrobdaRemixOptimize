@@ -70,7 +70,7 @@ public class SaveDataManager
 			{
 				File.Delete(string.Concat(new object[] { this.filepath, "/", name, ".png" }));
 			}
-			File.Move(this.filepath + "/test.png", string.Concat(new object[] { this.filepath, "/", name, ".png" }));
+			File.Copy(this.filepath + "/test.png", string.Concat(new object[] { this.filepath, "/", name, ".png" }));
 		}
 		FileStream fileStream = new FileStream(string.Concat(new object[] { this.filepath, "/", name, ".dat" }), FileMode.Create);
 		StreamWriter streamWriter = new StreamWriter(fileStream, Encoding.GetEncoding("utf-8"));
