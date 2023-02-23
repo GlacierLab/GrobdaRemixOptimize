@@ -7,7 +7,8 @@ public class InitManager : MonoBehaviour
 	// Token: 0x060001F2 RID: 498 RVA: 0x000072E4 File Offset: 0x000056E4
 	private void Start()
 	{
-		if (this.IsDebug)
+		QualitySettings.SetQualityLevel(5, true);
+        if (this.IsDebug)
 		{
 			this.DebugLoad();
 		}
