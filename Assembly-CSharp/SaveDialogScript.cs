@@ -23,8 +23,6 @@ public class SaveDialogScript : MonoBehaviour
 		int num = this.saveItemGroup.num;
 		this.saveItemGroup.saveData = SaveDataManager.GetInstance().SaveDataToDisk(num, false);
 		this.saveItemGroup.SetSaveData(this.saveItemGroup.saveData, num);
-		SaveDataManager.GetInstance().CopySaveData(num, 0);
-		this.saveItemGroup.SetSaveData(this.saveItemGroup.saveData, 0);
 		base.gameObject.SetActive(false);
 	}
 
