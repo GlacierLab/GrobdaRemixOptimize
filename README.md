@@ -1,5 +1,11 @@
 # 且听琴语GR优化组件
 
+## 使用方法
+下载[Release](https://github.com/GlacierLab/GrobdaRemixOptimize/releases)内的压缩包  
+将`globalgamemanagers`文件替换到游戏目录`\kotokata_Data\`下的`globalgamemanagers`文件  
+将`Assembly-CSharp.dll`文件替换到游戏目录下`\kotokata_Data\Managed\`下的`Assembly-CSharp.dll`文件  
+运行游戏
+
 ## 包含的优化
 修复一次存多个档第二个开始无截图的问题（23/02/23）  
 加快菜单动画拖沓的速度（23/02/23）  
