@@ -2,6 +2,7 @@
 using System.Collections;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 // Token: 0x020000B5 RID: 181
@@ -101,14 +102,22 @@ public class SaveItemGroup : MonoBehaviour
 	// Token: 0x06000401 RID: 1025 RVA: 0x0000DAD4 File Offset: 0x0000BED4
 	private IEnumerator LoadImage()
 	{
-		Texture2D tex = null;
+        Texture2D tex = null;
 		if (File.Exists(this.img))
 		{
-			tex = new Texture2D(2, 2, TextureFormat.DXT1, false);
-			WWW www = new WWW("file://" + this.img);
-			yield return www;
-			www.LoadImageIntoTexture(tex);
-			www.Dispose();
+            using (UnityWebRequest www = UnityWebRequest.GetTexture(("file://" + this.img),true))
+            {
+                yield return www.Send();
+
+                if (www.isError)
+                {
+                    Debug.Log(www.error);
+                }
+                else
+                {
+                    tex = DownloadHandlerTexture.GetContent(www);
+                }
+            }
 		}
 		yield return 0;
 		this.screenshot.sprite = this.GetSpriteFromTexture(tex);
