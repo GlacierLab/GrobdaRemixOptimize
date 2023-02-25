@@ -119,6 +119,10 @@ public class SaveItemGroup : MonoBehaviour
                 }
             }
 		}
+		else
+		{
+            tex=new Texture2D(1,1,TextureFormat.Alpha8,false);
+        };
 		yield return 0;
 		this.screenshot.sprite = this.GetSpriteFromTexture(tex);
 		yield return 0;
