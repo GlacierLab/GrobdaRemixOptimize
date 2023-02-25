@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -61,7 +62,14 @@ public class GameButtonClick : UIGameObject
 	// Token: 0x06000393 RID: 915 RVA: 0x0000C64B File Offset: 0x0000AA4B
 	public void ShowSave()
 	{
-		Application.CaptureScreenshot(this.filepath + "/test.png", 0);
+        Texture2D screenshot = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, true);
+        screenshot.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+        screenshot.Apply();
+        Texture2D newScreenshot = new Texture2D(screenshot.width / 4, screenshot.height / 4);
+        newScreenshot.SetPixels(screenshot.GetPixels(2));
+        newScreenshot.Apply();
+        byte[] bytes = newScreenshot.EncodeToPNG();
+        File.WriteAllBytes(this.filepath + "/test.png", bytes);
 		Singleton<SystemSoundManager>.Instance.PlaySound1();
 		Singleton<UIManager>.Instance.ShowUi("save");
 	}
